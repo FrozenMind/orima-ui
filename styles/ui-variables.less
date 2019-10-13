@@ -7,14 +7,45 @@
 
 // Overrides: atom/static/variables/ui-variables.less
 
-// Try to edit some of the values below to see your theme change.
-// A good start is to change the color of the `@base-background-color` variable.
-
 // Custom Colors
 @c-white: hsl(40, 100%, 95%);
 @c-orange: hsl(40, 90%, 50%);
-@c-black-light: hsl(40, 100%, 10%);
-@c-black-dark: hsl(40, 100%, 0%);
+@c-orange-2: hsl(40, 70%, 30%);
+@c-black-dark: hsl(40, 0%, 0%);
+@c-black-light: lighten(@c-black-dark, 15%);
+@c-grey: hsl(40, 0%, 60%);
+@c-grey-1: hsl(40, 0%, 20%);
+@c-red: hsl(0, 70%, 50%);
+@c-red-2: lighten(@c-red, 15%);
+@c-blue: hsl(208, 100%, 50%);
+@c-blue-2: lighten(@c-red, 15%);
+@c-green: hsl(160,  70%, 36%);
+@c-green-2: lighten(@c-green, 15%);
+@c-orange-3: hsl(32,   60%, 50%);
+@c-orange-4: lighten(@c-orange, 15%);
+
+// status colors
+@status-fe-info:    @c-blue-2;
+@status-fe-success: @c-green-2;
+@status-fe-warning: @c-orange-4;
+@status-fe-error:   @c-red-2;
+@status-fe-disabled: @c-grey-1;
+@status-be-info:    @c-blue;
+@status-be-success: @c-green;
+@status-be-warning: @c-orange-3;
+@status-be-error:   @c-red;
+
+// tree view (tv)
+@tv-background-color: @c-black-dark;
+@tv-folder-color: @c-orange-2;
+@tv-file-color: @c-orange;
+@tv-selected-fg: @c-black-dark;
+@tv-selected-bg: @c-white;
+@tv-hover-fg: @c-red;
+@tv-git-ignore: @status-fe-disabled;
+@tv-git-modified: @c-white;
+@tv-git-added: @status-fe-success;
+@tv-git-deleted: @status-fe-error;
 
 // Custom spacings
 @space-1: 1px;
@@ -25,6 +56,84 @@
 @space-16: 16px;
 @space-24: 24px;
 @space-32: 32px;
+
+
+// Text Colors
+@text-color:           hsl(0,0%,66%);
+@text-color-subtle:    hsl(0,0%,50%);
+@text-color-highlight: hsl(0,0%,94%);
+@text-color-selected:  hsl(0,0%,100%);
+
+@background-color-highlight: lighten(@base-background-color, 5%);
+@background-color-selected:  lighten(@base-background-color, 10%);
+@app-background-color:       darken(@base-background-color, 5%);
+
+// Base colors
+@base-background-color: hsl(222,6%,22%);
+@base-border-color:     darken(@base-background-color, 8%);
+
+// Component colors
+@pane-item-background-color: @base-background-color;
+@pane-item-border-color:     @base-border-color;
+
+@input-background-color: @app-background-color;
+@input-border-color:     @base-border-color;
+
+@tool-panel-background-color: @base-background-color;
+@tool-panel-border-color:     @base-border-color;
+
+@inset-panel-background-color: lighten(@base-background-color, 4%);
+@inset-panel-border-color:     @base-border-color;
+
+@panel-heading-background-color: lighten(@base-background-color, 4%);
+@panel-heading-border-color:     @base-border-color;
+
+@overlay-background-color: lighten(@base-background-color, 5%);
+@overlay-border-color:     @base-border-color;
+
+@button-background-color:          lighten(@base-background-color, 10%);
+@button-background-color-hover:    lighten(@button-background-color, 12%);
+@button-background-color-selected: @button-background-color-hover;
+@button-border-color:              @base-border-color;
+
+@tab-bar-background-color:    @base-background-color;
+@tab-bar-border-color:        @base-border-color;
+@tab-background-color:        @tab-bar-background-color;
+@tab-background-color-active: lighten(@tab-bar-background-color, 10%);
+@tab-border-color:            @base-border-color;
+
+// Site colors
+@ui-site-color-1: hsl(208, 100%, 50%); // blue
+@ui-site-color-2: hsl(160,  70%, 42%); // green
+@ui-site-color-3: hsl(32,   60%, 50%); // orange
+@ui-site-color-4: #D831B0;             // pink
+@ui-site-color-5: #EBDD5B;             // yellow
+
+// Sizes
+@font-size: 12px;
+@input-font-size: 14px;
+
+@disclosure-arrow-size: 12px;
+
+@component-padding: 10px;
+@component-icon-padding: 5px;
+@component-icon-size: 16px;
+@component-line-height: 25px;
+
+@tab-height: 30px;
+
+// Misc
+@component-border-radius: 2px;
+@font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+
+
+
+
+
+
+
+/*
+Colors I need to define before publishing ui theme
 
 // Text Colors
 @text-color:           hsl(0,0%,66%);
@@ -81,6 +190,7 @@
 @tab-background-color-active: lighten(@tab-bar-background-color, 10%);
 @tab-border-color:            @base-border-color;
 
+@tree-view-background-color: @base-background-color;
 @tree-view-border-color:     @base-border-color;
 
 // Site colors
@@ -106,3 +216,5 @@
 // Misc
 @component-border-radius: 2px;
 @font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+
+*/

@@ -6,20 +6,43 @@
 // Used to explore and open files in the current project.
 // Overrides: atom/tree-view
 
-
-.tree-view-resizer {
-  border-right: 1px solid @base-border-color;
-}
-
 .tree-view {
-  color: @text-color;
-  background-color: @c-black-dark;
+  color: @tv-file-color;
+  background-color: @tv-background-color;
 
-  .list-item.selected {
-    color: @text-color-selected;
+  li.list-item {
+    &.status-modified > span {
+      color: @tv-git-modified;
+    }
+    &.status-added > span {
+      color: @tv-git-added;
+    }
+    &.status-deleted > span {
+      color: @tv-git-deleted;
+    }
+    &.status-ignored > span {
+      color: @tv-git-ignore;
+    }
+    &.file:not(.status-added):not(.status-deleted):not(.status-modified):not(.status-ignored):not(.selected):not(:hover) > span {
+      color: @tv-file-color;
+    }
+    &.selected {
+      background-color: @tv-selected-bg;
+      &> span {
+        color: @tv-selected-fg;
+      }
+    }
+    &:hover > span {
+      color: @tv-hover-fg;
+    }
+  }
+  li.list-nested-item {
+    &.directory > span {
+      color: @tv-folder-color;
+    }
+    &> div.header:hover > span {
+      color: @tv-hover-fg;
+    }
   }
 
-  .list-item:hover {
-    color: @c-white;
-  }
 }
