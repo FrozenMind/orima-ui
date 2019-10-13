@@ -7,5 +7,22 @@
 // Overrides: atom/find-and-replace
 
 .find-and-replace {
-  border-top: 1px solid @base-border-color;
+  background-color: @c-black-dark;
+
+  &.has-no-results {
+    & section.find-container div atom-text-editor {
+      color: @c-red;
+    }
+    & header.header span.description {
+      color: @c-red;
+    }
+  }
+  &.has-results {
+    & section.find-container div atom-text-editor {
+      color: @c-green;
+    }
+    & header.header span.description {
+      color: @c-green;
+    }
+  }
 }
