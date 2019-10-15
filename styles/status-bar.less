@@ -9,7 +9,25 @@
 
 .status-bar {
   font-size: @font-size;
-  color: @text-color;
-  border-top: 1px solid @base-border-color;
+  border-top: 1px solid @c-orange;
   background-color: @c-black-dark;
+
+  div.react-atom-status-bar.github-StatusBarTileController span, button {
+    color: @c-orange;
+  }
+  div.react-atom-status-bar.github-StatusBarTileController span:hover, button:hover {
+    color: @c-red;
+  }
+  div.status-bar-right a {
+    color: @c-orange;
+  }
+  div.status-bar-right a:hover {
+    color: @c-red;
+  }
+  div.status-bar-left a {
+    color: @c-orange;
+  }
+  div.status-bar-left a:hover {
+    color: @c-red;
+  }
 }
